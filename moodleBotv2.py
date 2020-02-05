@@ -10,7 +10,7 @@ from time import sleep
 
 class moodleBot2():
     url = "https://www.eduvidual.org/mod/quiz/view.php?id=47463"
-    creds = ["maximilian.spannring@akadgym.at", "Rainberg1"]
+    creds = ["maximilian.spannring@akadgym.at", "Nope"]
     driver = webdriver.Chrome(r'chromedriver.exe')
     q_list = {}
 
