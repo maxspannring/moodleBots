@@ -10,7 +10,7 @@ from time import sleep
 
 class moodleBot2():
     url = "https://www.eduvidual.org/mod/quiz/view.php?id=47463"
-    creds = ["maximilian.spannring@akadgym.at", "nope"]
+    creds = ["maximilian.spannring@akadgym.at", "Rainberg1"]
     driver = webdriver.Chrome(r'chromedriver.exe')
     q_list = {}
 
@@ -105,7 +105,8 @@ class moodleBot2():
                             open_q.append(i)  # falls doch, wird sie zu den unbeantworteten Fragen hinzugefügt
 
     def define_type(self):
-        pass
+        print("der typ ist vlaah ballah")
+        return "protoTYPE"
 
     def parse_LaTex(self):
         pass

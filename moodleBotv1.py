@@ -48,8 +48,8 @@ def enum_open_q():          #findet heraus wie viele Fragen schon beantwortet wu
     q.append(driver.find_element_by_id("quiznavbutton2"))
     q.append(driver.find_element_by_id("quiznavbutton3"))
     q.append(driver.find_element_by_id("quiznavbutton4"))
-    q.append(driver.find_element_by_id("quiznavbutton5"))
-    q.append(driver.find_element_by_id("quiznavbutton6"))
+    #q.append(driver.find_element_by_id("quiznavbutton5"))
+    #q.append(driver.find_element_by_id("quiznavbutton6"))
     for i in q:
         status = i.get_attribute("title")
         if status == "Antwort gespeichert":
@@ -146,8 +146,8 @@ def fill_in(dict):
             q.append(driver.find_element_by_id("quiznavbutton2"))
             q.append(driver.find_element_by_id("quiznavbutton3"))
             q.append(driver.find_element_by_id("quiznavbutton4"))
-            q.append(driver.find_element_by_id("quiznavbutton5"))
-            q.append(driver.find_element_by_id("quiznavbutton6"))
+            #q.append(driver.find_element_by_id("quiznavbutton5"))
+            #q.append(driver.find_element_by_id("quiznavbutton6"))
             sleep(0.5)
             for i in q:
                 href = i.get_attribute("href")
@@ -182,7 +182,7 @@ def fill_in(dict):
 
 def finish(really):
     print("[i]\tGeht noch einmal alle Fragen durch")
-    ids = ["quiznavbutton1", "quiznavbutton2", "quiznavbutton3", "quiznavbutton4", "quiznavbutton5", "quiznavbutton6"]
+    ids = ["quiznavbutton1", "quiznavbutton2", "quiznavbutton3", "quiznavbutton4"] #, "quiznavbutton5", "quiznavbutton6"]
     for i in ids:
         btn = driver.find_element_by_id(i)
         sleep(0.5)
@@ -204,7 +204,7 @@ creds = [str(email), str(pwd)]
 driver = webdriver.Chrome(r'chromedriver.exe')
 Lösungsbuch = {}        #alle Lösungen für die unteschiedlicehn aufgaben, noch leer
 
-site = driver.get("https://www.eduvidual.org/mod/quiz/view.php?id=47556")
+site = driver.get("https://www.eduvidual.org/mod/quiz/view.php?id=51985")
 main_window = driver.current_window_handle
 
 if driver.current_url == "https://www.eduvidual.org/login/index.php":        #wenn der Benutzer nicht angemeldet ist
